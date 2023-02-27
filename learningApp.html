@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Web Learning App</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+#clock {
+    color: #17D4FE;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+}
+.container{
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a href="learningApp.html" class="navbar-brand">Frontend Learning App</a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="navbar-nav ms-auto">              	
+        <div  class="nav-item" id="clock" onLoad="showTime()"></div>
+    </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+                <a href="learningApp.html" class="nav-item nav-link active">Home</a>
+            </div>
+            
+            <div class="navbar-nav ms-auto">              	
+                <a href="login.html" class="nav-item nav-link">Login</a>
+              	<a href="registrationForm.html" class="nav-item nav-link">Register</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container">
+
+    <div class="row g-3">
+        <div class="card col-md-6 col-lg-4 col-xl-3">
+            <h5 class="card-header">HTML5</h5>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="apnaApp.html" class="btn btn-info">click to learn more</a>
+            </div>
+          </div>
+        <div class="card col-md-6 col-lg-4 col-xl-3">
+            <h5 class="card-header">CSS3</h5>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-info">click to learn more</a>
+            </div>
+          </div>
+        <div class="card col-md-6 col-lg-4 col-xl-3">
+            <h5 class="card-header">JavaScript</h5>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="jsLearning.html" class="btn btn-info">click to learn more</a>
+            </div>
+          </div>
+        <div class="card col-md-6 col-lg-4 col-xl-3">
+            <h5 class="card-header">Bootstrap5</h5>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-info">click to learn more</a>
+            </div>
+          </div>
+        <div class="card col-md-6 col-lg-4 col-xl-3">
+            <h5 class="card-header">Angular 12</h5>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-info">click to learn more</a>
+            </div>
+          </div>
+        <div class="card col-md-6 col-lg-4 col-xl-3">
+            <h5 class="card-header">Angular 12 material</h5>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-info">click to learn more</a>
+            </div>
+          </div>
+        <div class="card col-md-6 col-lg-4 col-xl-3">
+            <h5 class="card-header">JQuery</h5>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-info">click to learn more</a>
+            </div>
+          </div>
+          <div class="card col-md-6 col-lg-4 col-xl-3">
+            <h5 class="card-header">Projects</h5>
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">I have created mini projects using html/css & javascript</p>
+              <a href="projects.html" class="btn btn-info">click to learn more</a>
+            </div>
+          </div>
+    </div>
+    <hr>
+    <footer>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Copyright © Frontend Learning App</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="#" class="text-dark">Terms of Use</a>
+                <span class="text-muted mx-2">|</span>
+                <a href="#" class="text-dark">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</div>
+<script>
+    setInterval(showTime, 1000);
+function showTime() {
+    let time = new Date();
+    let hour = time.getHours();
+    let min = time.getMinutes();
+    let sec = time.getSeconds();
+    am_pm = "AM";
+  
+    if (hour > 12) {
+        hour -= 12;
+        am_pm = "PM";
+    }
+    if (hour == 0) {
+        hr = 12;
+        am_pm = "AM";
+    }
+  
+    hour = hour < 10 ? "0" + hour : hour;
+    min = min < 10 ? "0" + min : min;
+    sec = sec < 10 ? "0" + sec : sec;
+  
+    let currentTime = hour + ":" 
+            + min + ":" + sec + am_pm;
+  
+    document.getElementById("clock")
+            .innerHTML = currentTime;
+}
+showTime();
+</script>
+</body>
+</html>
