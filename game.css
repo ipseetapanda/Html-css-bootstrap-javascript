@@ -1,0 +1,41 @@
+body{
+    background: darksalmon;
+}
+.imgBox{
+    background-image: url(cow.jpeg);
+    position: relative;
+    height: 400px;
+    width: 400px;
+
+}
+.whiteBox{
+    height: 410px;
+    width: 410px;
+    background-color: white;
+    margin: 10px;
+    /* display: inline-block; */
+}
+
+/* on hold of img red border will display */
+.hold{
+    border: solid 4px red;
+}
+
+/* on drag of img it will hide the src img */
+.hide{
+    display: none;
+}
+.dropzone{
+    height: 410px;
+    width: 410px;
+    background-color: white;
+    margin: 10px;
+    display: inline-block;
+}
+.dashed{
+    background: rgb(214, 206, 206);
+    border-style: dashed;
+}
+.container{
+    background-color: salmon;
+}

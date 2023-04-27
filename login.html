@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="main.css">
+    <script src = "../Bootstrap Project/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="bg-info">
+
+<!--navbar collapse-->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="Landing.html">Mini Project</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="signup.html">Sign up</a>
+      </li>   
+    </ul>
+  </div>  
+</nav>
+  <!-- login -->
+    <div class="container pt-5 bg-info">
+        <form name="myForm" class="form-control form-control-lg p-5" onsubmit="validateForm()" action="">
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" placeholder="Enter email" id="email">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+              </div>
+              <div class="form-group form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox"> Remember me
+                </label>
+              </div>
+              <button type="submit" class="btn btn-info text-white" >Submit</button>
+        </form>
+    </div>
+
+
+<!-- javascript -->
+<!-- <script>
+  function validateForm(){
+
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("pwd").value;
+
+    if (name == '' || name == null){
+      console.log("empty email")
+    }else if(password.length < 6 ){
+      console.log("empty password")
+    }
+
+  }
+</script> -->
+</body>
+</html>
